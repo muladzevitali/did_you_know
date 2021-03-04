@@ -1,5 +1,5 @@
 DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['46.101.127.233', 'www.46.101.127.233']
 SWAGGER_SETTINGS = {
-    'VALIDATOR_URL': 'http://localhost:8000',
+    'VALIDATOR_URL': 'http://46.101.127.233',
 }
