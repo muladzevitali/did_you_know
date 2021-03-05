@@ -9,5 +9,5 @@ app_name = 'authentication'
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='User')
 
-urlpatterns = (path('', include(router.urls)),
-               path('auth/token', obtain_auth_token, name='token_auth'))
+urlpatterns = (path('rest/', include(router.urls)),
+               path('rest/auth/token', obtain_auth_token, name='token_auth'))

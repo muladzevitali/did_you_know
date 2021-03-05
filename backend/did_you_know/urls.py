@@ -11,8 +11,9 @@ openapi_info = openapi.Info(
 
 schema_view = get_schema_view(openapi_info, public=True, permission_classes=[permissions.AllowAny], )
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rest/', include('apps.authentication.urls')),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('', include('apps.authentication.urls')),
+    path('rest/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
